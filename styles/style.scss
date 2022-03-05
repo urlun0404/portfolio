@@ -1,0 +1,346 @@
+$background-color-light: #9ee0d0;
+$background-color-dark: #9ee0cf65;
+$main-color: #15725b;
+$secondary-color: #608c82;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif TC", serif, "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body {
+  position: relative;
+}
+
+body.overflow {
+  overflow-y: hidden;
+}
+
+.background {
+  position: absolute;
+  top: -10vh;
+  right: 0vw;
+  z-index: -1;
+  width: 55vw;
+  height: 120vh;
+}
+
+header {
+  width: 100%;
+  nav {
+    width: 65%;
+    padding: 1.5rem 0 1.25rem 0;
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-around;
+      padding-left: 1rem;
+      li {
+        font-size: 1.5rem;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  // align-items: center;
+  section.left {
+    flex: 3 1 500px;
+    padding: 2rem;
+    h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      color: $secondary-color;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.5rem;
+      padding: 1rem 0;
+      text-align: justify;
+    }
+  }
+  section.right {
+    flex: 1 1 600px;
+    position: relative;
+    img {
+      width: 18vw;
+      height: 18vw;
+      border-radius: 50%;
+      position: absolute;
+      top: 40vh;
+      right: 22vw;
+      transform: translateY(-50%);
+    }
+  }
+  section.table {
+    flex: 1 1 700px;
+    padding: 1rem 1.5rem 1rem 2.5rem;
+    text-align: justify;
+    table {
+      font-size: 1.1rem;
+      border-collapse: collapse;
+      tr {
+        td {
+          padding: 0.75rem 1rem;
+          border-bottom: 3px solid #c4c4c4;
+          p,
+          ul li {
+            margin-bottom: 0.4rem;
+          }
+          ul {
+            padding-left: 1.5rem;
+            font-size: 1rem;
+          }
+          div.icons {
+            display: flex;
+            width: 70%;
+            justify-content: space-around;
+            img {
+              width: 3.5%;
+              height: 3.5%;
+              min-width: 48px;
+              min-height: 48px;
+            }
+          }
+          &.autobiography {
+            p:not(:first-child) {
+              text-indent: 2rem;
+            }
+          }
+        }
+        .tbTitle {
+          font-size: 1.25rem;
+          text-align: center;
+        }
+        &:hover {
+          background-color: $background-color-dark;
+        }
+      }
+    }
+  }
+  section.person {
+    flex: 1 1 300px;
+    padding: 2rem;
+    position: relative;
+    img {
+      width: 25vw;
+      transform: translate(10%, -5%);
+    }
+    div.rectBackground {
+      // min-width: 50%;
+      width: 25vw;
+      height: 75vh;
+      background-color: $background-color-light;
+      position: absolute;
+      top: 70px;
+      right: 90px;
+      z-index: -1;
+    }
+  }
+  section.form {
+    flex: 2 1 500px;
+    padding: 3rem 4rem;
+    h2 {
+      font-size: 1rem;
+      line-height: 1.75em;
+      padding: 0.5rem 0 1rem 0;
+      a {
+        color: $main-color;
+        text-decoration: underline;
+      }
+    }
+    form {
+      display: flex;
+      flex: wrap;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      input,
+      textarea {
+        min-width: 75%;
+        width: 100%;
+        background-color: #e0ddddd8;
+        color: $main-color;
+        border: none;
+        font-size: 1.25rem;
+        padding: 0.5rem 0.25rem;
+        margin: 0 auto;
+      }
+      input:required,
+      textarea:required {
+        box-shadow: none;
+      }
+      textarea {
+        resize: vertical;
+        height: 250px;
+      }
+      button {
+        align-self: center;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        padding: 0.5rem 1.25rem;
+        margin: 1rem 0 0.5rem 0;
+        background-color: $background-color-light;
+        color: white;
+        font-weight: bold;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  section.contact {
+    flex: 1 1 600px;
+    padding: 3rem 1rem;
+    h2 {
+      font-size: 1.75rem;
+      font-weight: bold;
+      padding: 1rem 0;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  div.icons {
+    margin-left: 1rem;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    a {
+      text-decoration: none;
+      img {
+        width: 4vw;
+        height: 4vw;
+      }
+    }
+  }
+}
+
+.active {
+  color: $main-color;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+// flex-basis: (500 +600) px
+@media screen and (max-width: 1100px) {
+  body.overflow {
+    overflow-y: scroll;
+  }
+
+  .background {
+    top: 60vh;
+  }
+
+  header {
+    nav {
+      width: 90%;
+      ul {
+        display: flex;
+        flex-direction: column;
+        li {
+          border-bottom: 1px solid gray;
+          padding: 1rem 0;
+        }
+      }
+    }
+    margin-bottom: 5rem;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    section.left {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+    section.right {
+      flex: 1 1 300px;
+      img {
+        width: 30vw;
+        height: 30vw;
+        position: static;
+        transform: none;
+      }
+    }
+    section.person {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1 1 300px;
+      img {
+        width: 50vw;
+        transform: translate(0);
+      }
+      div.rectBackground {
+        display: none;
+      }
+    }
+
+    section.form {
+      flex: 1 1 600px;
+      width: 100%;
+      min-height: 80vh;
+      margin: 5em 0;
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        label {
+          margin: 1rem 0 0.75rem 0;
+        }
+        input {
+          min-width: 70%;
+        }
+      }
+    }
+
+    section.contact {
+      min-height: 20vh;
+      margin: 1rem 0;
+      flex: 1 1 300px;
+    }
+  }
+
+  footer {
+    div.icons {
+      width: 50%;
+      margin: 2rem auto;
+      a {
+        img {
+          width: 8vw;
+          height: 8vw;
+        }
+      }
+    }
+  }
+}
