@@ -24,6 +24,32 @@ body {
   overflow-y: hidden;
 }
 
+.animation {
+  width: 100vw;
+}
+
+.animation .logos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.animation .logos .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .background {
   position: absolute;
   top: -10vh;
@@ -398,7 +424,7 @@ footer div.icons a img {
     overflow-y: scroll;
   }
   .background {
-    display: none;
+    top: 60vh;
   }
   header {
     margin-bottom: 1rem;
@@ -565,6 +591,16 @@ footer div.icons a img {
   footer div.icons a img {
     width: 6vw;
     height: 6vw;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
