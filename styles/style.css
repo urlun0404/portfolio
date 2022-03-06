@@ -15,11 +15,12 @@ h6 {
   font-weight: normal;
 }
 
-body {
-  position: relative;
+a {
+  text-decoration: none;
 }
 
-body.overflow {
+body {
+  position: relative;
   overflow-y: hidden;
 }
 
@@ -37,7 +38,7 @@ header {
 }
 
 header nav {
-  width: 65%;
+  width: 50%;
   padding: 1.5rem 0 1.25rem 0;
 }
 
@@ -66,10 +67,12 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  width: 100%;
+  height: 80vh;
+}
+
+main h1 {
+  display: none;
 }
 
 main section.left {
@@ -79,7 +82,8 @@ main section.left {
   padding: 2rem;
 }
 
-main section.left h1 {
+main section.left h1#home-title {
+  display: block;
   font-size: 3rem;
   font-weight: 500;
   color: #608c82;
@@ -87,7 +91,7 @@ main section.left h1 {
 }
 
 main section.left p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   padding: 1rem 0;
   text-align: justify;
 }
@@ -110,60 +114,120 @@ main section.right img {
           transform: translateY(-50%);
 }
 
-main section.table {
+main section.resume {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 700px;
-          flex: 1 1 700px;
-  padding: 1rem 1.5rem 1rem 2.5rem;
-  text-align: justify;
+      -ms-flex: 1 1 600px;
+          flex: 1 1 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1.5rem 1rem 2.5rem;
+  height: 80vh;
 }
 
-main section.table table {
-  font-size: 1.1rem;
+main section.resume .resume-top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 1rem 0;
+}
+
+main section.resume .resume-top h1 {
+  display: block;
+  font-size: 1.5rem;
+}
+
+main section.resume .resume-top a {
+  color: #fff;
+  display: inline-block;
+  width: auto;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #15725b;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1em;
+  padding: 0.5rem 0.75rem;
+  margin: 0.75rem 0;
+  position: absolute;
+  right: 0;
+}
+
+main section.resume .resume-top a:hover {
+  -webkit-filter: brightness(1.15);
+          filter: brightness(1.15);
+}
+
+main section.resume .table-wrapper {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+main section.resume .table-wrapper table {
+  font-size: 1rem;
   border-collapse: collapse;
 }
 
-main section.table table tr td {
+main section.resume .table-wrapper table tr td:first-child {
+  width: 15%;
+}
+
+main section.resume .table-wrapper table tr td {
   padding: 0.75rem 1rem;
   border-bottom: 3px solid #c4c4c4;
 }
 
-main section.table table tr td p,
-main section.table table tr td ul li {
+main section.resume .table-wrapper table tr td p,
+main section.resume .table-wrapper table tr td ul li {
   margin-bottom: 0.4rem;
 }
 
-main section.table table tr td ul {
+main section.resume .table-wrapper table tr td ul {
   padding-left: 1.5rem;
   font-size: 1rem;
 }
 
-main section.table table tr td div.icons {
+main section.resume .table-wrapper table tr td div.icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-main section.table table tr td div.icons img {
+main section.resume .table-wrapper table tr td div.icons img {
   width: 3.5%;
   height: 3.5%;
   min-width: 48px;
   min-height: 48px;
 }
 
-main section.table table tr td.autobiography p:not(:first-child) {
+main section.resume .table-wrapper table tr td.autobiography p:not(:first-child) {
   text-indent: 2rem;
 }
 
-main section.table table tr .tbTitle {
-  font-size: 1.25rem;
+main section.resume .table-wrapper table tr .tbTitle {
+  font-size: 1.15rem;
   text-align: center;
 }
 
-main section.table table tr:hover {
+main section.resume .table-wrapper table tr:hover {
   background-color: #9ee0cf65;
 }
 
@@ -183,7 +247,7 @@ main section.person img {
 
 main section.person div.rectBackground {
   width: 25vw;
-  height: 75vh;
+  height: 40vw;
   background-color: #9ee0d0;
   position: absolute;
   top: 70px;
@@ -192,16 +256,33 @@ main section.person div.rectBackground {
 }
 
 main section.form {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 1 500px;
-          flex: 2 1 500px;
-  padding: 3rem 4rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 550px;
+          flex: 1 1 550px;
+  height: inherit;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+}
+
+main section.form h2,
+main section.form form {
+  width: 80%;
 }
 
 main section.form h2 {
   font-size: 1rem;
   line-height: 1.75em;
-  padding: 0.5rem 0 1rem 0;
+  padding: 1.5rem 0;
 }
 
 main section.form h2 a {
@@ -220,21 +301,21 @@ main section.form form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.5rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
 }
 
 main section.form form input,
 main section.form form textarea {
-  min-width: 75%;
+  min-width: 80%;
   width: 100%;
   background-color: #e0ddddd8;
   color: #15725b;
   border: none;
   font-size: 1.25rem;
-  padding: 0.5rem 0.25rem;
+  padding: 0.2rem 0.25rem;
   margin: 0 auto;
 }
 
@@ -246,7 +327,7 @@ main section.form form textarea:required {
 
 main section.form form textarea {
   resize: vertical;
-  height: 250px;
+  height: 200px;
 }
 
 main section.form form button {
@@ -255,9 +336,8 @@ main section.form form button {
       align-self: center;
   border: none;
   border-radius: 5px;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   padding: 0.5rem 1.25rem;
-  margin: 1rem 0 0.5rem 0;
   background-color: #9ee0d0;
   color: white;
   font-weight: bold;
@@ -267,32 +347,30 @@ main section.form form button:hover {
   cursor: pointer;
 }
 
-main section.contact {
+main section.map-wrapper {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 600px;
-          flex: 1 1 600px;
-  padding: 3rem 1rem;
+      -ms-flex: 1 1 550px;
+          flex: 1 1 550px;
+  width: 100%;
+  max-height: 80vh;
 }
 
-main section.contact h2 {
-  font-size: 1.75rem;
-  font-weight: bold;
-  padding: 1rem 0;
-}
-
-main section.contact p {
-  font-size: 1.5rem;
+main section.map-wrapper #map {
+  position: relative;
+  top: -20vh;
+  z-index: 10;
+  width: 100%;
+  height: 110vh;
 }
 
 footer {
   width: 100%;
-  margin-top: 1rem;
-  padding-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 
 footer div.icons {
   margin-left: 1rem;
-  width: 20%;
+  width: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,8 +383,8 @@ footer div.icons a {
 }
 
 footer div.icons a img {
-  width: 4vw;
-  height: 4vw;
+  width: 2.5vw;
+  height: 2.5vw;
 }
 
 .active {
@@ -316,14 +394,14 @@ footer div.icons a img {
 }
 
 @media screen and (max-width: 1100px) {
-  body.overflow {
+  body {
     overflow-y: scroll;
   }
   .background {
-    top: 60vh;
+    display: none;
   }
   header {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
   }
   header nav {
     width: 90%;
@@ -357,6 +435,13 @@ footer div.icons a img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: auto;
+  }
+  main h1 {
+    display: block;
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 1rem 0;
   }
   main section.left p {
     font-size: 1.5rem;
@@ -395,13 +480,50 @@ footer div.icons a img {
   main section.person div.rectBackground {
     display: none;
   }
+  main section.resume {
+    height: auto;
+  }
+  main section.resume .resume-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section.resume .resume-top a {
+    position: static;
+  }
+  main section.resume .table-wrapper {
+    padding: 0 1.75rem;
+  }
+  main section.resume .table-wrapper table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section.resume .table-wrapper table tr td:first-child {
+    width: 100%;
+  }
+  main section.resume .table-wrapper table tr td {
+    gap: 1rem;
+  }
+  main section.resume .table-wrapper table tr td div.icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main section.resume .table-wrapper table,
+  main section.resume .table-wrapper table td ul {
+    font-size: 1.1rem;
+  }
   main section.form {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 600px;
-            flex: 1 1 600px;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
     width: 100%;
-    min-height: 80vh;
-    margin: 5em 0;
   }
   main section.form div {
     display: -webkit-box;
@@ -414,26 +536,35 @@ footer div.icons a img {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main section.form div label {
-    margin: 1rem 0 0.75rem 0;
-  }
   main section.form div input {
     min-width: 70%;
   }
-  main section.contact {
-    min-height: 20vh;
-    margin: 1rem 0;
+  main section.map-wrapper {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 300px;
-            flex: 1 1 300px;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-height: none;
+    margin: 2rem 0;
+  }
+  main section.map-wrapper #map {
+    position: static;
+    top: auto;
+    width: 80vw;
+    height: 50vw;
   }
   footer div.icons {
     width: 50%;
     margin: 2rem auto;
   }
   footer div.icons a img {
-    width: 8vw;
-    height: 8vw;
+    width: 6vw;
+    height: 6vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -19,6 +19,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
   </head>
   <body>
     <!-- header and nav bar -->
@@ -37,6 +44,7 @@
     <!-- main -->
     <main>
       <section class="form">
+        <h1>Contact</h1>
         <h2>
           Feel free to shoot me an email 📧
           <a
@@ -72,7 +80,9 @@
           <button type="submit">SUBMIT</button>
         </form>
       </section>
-      <section class="contact"></section>
+      <section class="map-wrapper">
+        <div id="map">map</div>
+      </section>
     </main>
     <!-- footer -->
     <footer>
@@ -100,5 +110,12 @@
         </a>
       </div>
     </footer>
+    <!-- leaflet map -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="./map.js"></script>
   </body>
 </html>

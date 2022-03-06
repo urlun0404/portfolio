@@ -1,3 +1,4 @@
+// animation
 const text = document.querySelectorAll(".theLogos");
 
 for (let i = 0; i < text.length; i++) {
