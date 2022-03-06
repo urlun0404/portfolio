@@ -28,7 +28,6 @@ body {
 }
 
 .animation .logos {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,6 +38,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .animation .logos .bottom {
@@ -67,13 +67,13 @@ header nav {
 }
 
 header nav ul {
-  list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding-left: 1rem;
+  list-style-type: none;
 }
 
 header nav ul li {
@@ -81,8 +81,8 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: black;
   text-decoration: none;
+  color: black;
 }
 
 main {
@@ -108,32 +108,32 @@ main section.left {
 
 main section.left h1#home-title {
   display: block;
+  margin-bottom: 0.5rem;
   font-size: 3rem;
   font-weight: 500;
   color: #608c82;
-  margin-bottom: 0.5rem;
 }
 
 main section.left p {
-  font-size: 1.25rem;
   padding: 1rem 0;
+  font-size: 1.25rem;
   text-align: justify;
 }
 
 main section.right {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 600px;
           flex: 1 1 600px;
-  position: relative;
 }
 
 main section.right img {
-  width: 18vw;
-  height: 18vw;
-  border-radius: 50%;
   position: absolute;
   top: 40vh;
   right: 22vw;
+  width: 18vw;
+  height: 18vw;
+  border-radius: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -152,12 +152,12 @@ main section.resume {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 1.5rem 1rem 2.5rem;
   height: 80vh;
+  padding: 0 1.5rem 1rem 2.5rem;
 }
 
 main section.resume .resume-top {
-  width: 100%;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,7 +167,7 @@ main section.resume .resume-top {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  width: 100%;
   margin: 1rem 0;
 }
 
@@ -177,19 +177,19 @@ main section.resume .resume-top h1 {
 }
 
 main section.resume .resume-top a {
-  color: #fff;
+  position: absolute;
+  right: 0;
   display: inline-block;
   width: auto;
   height: 40px;
-  border-radius: 8px;
-  background-color: #15725b;
-  text-align: center;
-  font-size: 1.25rem;
-  line-height: 2em;
   padding: 0 0.75rem;
   margin: 0.75rem 0;
-  position: absolute;
-  right: 0;
+  background-color: #15725b;
+  color: #fff;
+  border-radius: 8px;
+  line-height: 2em;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 main section.resume .resume-top a:hover {
@@ -203,8 +203,8 @@ main section.resume .table-wrapper {
 }
 
 main section.resume .table-wrapper table {
-  font-size: 1rem;
   border-collapse: collapse;
+  font-size: 1rem;
 }
 
 main section.resume .table-wrapper table tr td:first-child {
@@ -260,11 +260,11 @@ main section.resume .table-wrapper table tr:hover {
 }
 
 main section.person {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 300px;
           flex: 1 1 300px;
   padding: 2rem;
-  position: relative;
 }
 
 main section.person img {
@@ -274,13 +274,13 @@ main section.person img {
 }
 
 main section.person div.rectBackground {
-  width: 25vw;
-  height: 40vw;
-  background-color: #9ee0d0;
   position: absolute;
   top: 70px;
   right: 90px;
   z-index: -1;
+  width: 25vw;
+  height: 40vw;
+  background-color: #9ee0d0;
 }
 
 main section.form {
@@ -308,14 +308,14 @@ main section.form form {
 }
 
 main section.form h2 {
+  padding: 1.5rem 0;
   font-size: 1rem;
   line-height: 1.75em;
-  padding: 1.5rem 0;
 }
 
 main section.form h2 a {
-  color: #15725b;
   text-decoration: underline;
+  color: #15725b;
 }
 
 main section.form form {
@@ -339,12 +339,12 @@ main section.form form input,
 main section.form form textarea {
   min-width: 80%;
   width: 100%;
-  background-color: #e0ddddd8;
-  color: #15725b;
-  border: none;
-  font-size: 1.15rem;
   padding: 0.2rem 0.25rem;
   margin: 0 auto;
+  background-color: #e0ddddd8;
+  font-size: 1.15rem;
+  color: #15725b;
+  border: none;
 }
 
 main section.form form input:required,
@@ -354,21 +354,21 @@ main section.form form textarea:required {
 }
 
 main section.form form textarea {
-  resize: vertical;
   height: 180px;
+  resize: vertical;
 }
 
 main section.form form button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  padding: 0.5rem 1rem;
+  background-color: #9ee0d0;
   border: none;
   border-radius: 5px;
   font-size: 1.1rem;
-  padding: 0.5rem 1rem;
-  background-color: #9ee0d0;
-  color: white;
   font-weight: bold;
+  color: white;
 }
 
 main section.form form button:hover {
@@ -397,11 +397,11 @@ footer {
 }
 
 footer div.icons {
-  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
+  width: 20%;
   padding-left: 1.5rem;
 }
 

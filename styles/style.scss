@@ -31,10 +31,10 @@ body {
 .animation {
   width: 100vw;
   .logos {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     .bottom {
       display: flex;
       gap: 3rem;
@@ -57,15 +57,15 @@ header {
     width: 50%;
     padding: 1.5rem 0 1.25rem 0;
     ul {
-      list-style-type: none;
       display: flex;
       justify-content: space-around;
       padding-left: 1rem;
+      list-style-type: none;
       li {
         font-size: 1.5rem;
         a {
-          color: black;
           text-decoration: none;
+          color: black;
         }
       }
     }
@@ -86,28 +86,28 @@ main {
     padding: 2rem 0 2rem 2rem;
     h1#home-title {
       display: block;
+      margin-bottom: 0.5rem;
       font-size: 3rem;
       font-weight: 500;
       color: $secondary-color;
-      margin-bottom: 0.5rem;
     }
     p {
-      font-size: 1.25rem;
       padding: 1rem 0;
+      font-size: 1.25rem;
       text-align: justify;
     }
   }
 
   section.right {
-    flex: 1 1 600px;
     position: relative;
+    flex: 1 1 600px;
     img {
-      width: 18vw;
-      height: 18vw;
-      border-radius: 50%;
       position: absolute;
       top: 40vh;
       right: 22vw;
+      width: 18vw;
+      height: 18vw;
+      border-radius: 50%;
       transform: translateY(-50%);
     }
   }
@@ -117,33 +117,33 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1.5rem 1rem 2.5rem;
     height: 80vh;
+    padding: 0 1.5rem 1rem 2.5rem;
     .resume-top {
-      width: 100%;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
+      width: 100%;
       margin: 1rem 0;
       h1 {
         display: block;
         font-size: 1.5rem;
       }
       a {
-        color: #fff;
+        position: absolute;
+        right: 0;
         display: inline-block;
         width: auto;
         height: 40px;
-        border-radius: 8px;
-        background-color: $main-color;
-        text-align: center;
-        font-size: 1.25rem;
-        line-height: 2em;
         padding: 0 0.75rem;
         margin: 0.75rem 0;
-        position: absolute;
-        right: 0;
+        background-color: $main-color;
+        color: #fff;
+        border-radius: 8px;
+        line-height: 2em;
+        font-size: 1.25rem;
+        text-align: center;
         &:hover {
           filter: brightness(1.15);
         }
@@ -154,8 +154,8 @@ main {
       height: 100%;
       overflow-y: scroll;
       table {
-        font-size: 1rem;
         border-collapse: collapse;
+        font-size: 1rem;
         tr {
           td:first-child {
             width: 15%;
@@ -202,21 +202,21 @@ main {
   }
 
   section.person {
+    position: relative;
     flex: 1 1 300px;
     padding: 2rem;
-    position: relative;
     img {
       width: 25vw;
       transform: translate(10%, -5%);
     }
     div.rectBackground {
-      width: 25vw;
-      height: 40vw;
-      background-color: $background-color-light;
       position: absolute;
       top: 70px;
       right: 90px;
       z-index: -1;
+      width: 25vw;
+      height: 40vw;
+      background-color: $background-color-light;
     }
   }
 
@@ -233,12 +233,12 @@ main {
       width: 80%;
     }
     h2 {
+      padding: 1.5rem 0;
       font-size: 1rem;
       line-height: 1.75em;
-      padding: 1.5rem 0;
       a {
-        color: $main-color;
         text-decoration: underline;
+        color: $main-color;
       }
     }
     form {
@@ -251,30 +251,30 @@ main {
       textarea {
         min-width: 80%;
         width: 100%;
-        background-color: #e0ddddd8;
-        color: $main-color;
-        border: none;
-        font-size: 1.15rem;
         padding: 0.2rem 0.25rem;
         margin: 0 auto;
+        background-color: #e0ddddd8;
+        font-size: 1.15rem;
+        color: $main-color;
+        border: none;
       }
       input:required,
       textarea:required {
         box-shadow: none;
       }
       textarea {
-        resize: vertical;
         height: 180px;
+        resize: vertical;
       }
       button {
         align-self: center;
+        padding: 0.5rem 1rem;
+        background-color: $background-color-light;
         border: none;
         border-radius: 5px;
         font-size: 1.1rem;
-        padding: 0.5rem 1rem;
-        background-color: $background-color-light;
-        color: white;
         font-weight: bold;
+        color: white;
         &:hover {
           cursor: pointer;
         }
@@ -300,9 +300,9 @@ footer {
   width: 100%;
   padding-top: 0.5rem;
   div.icons {
-    width: 20%;
     display: flex;
     gap: 1rem;
+    width: 20%;
     padding-left: 1.5rem;
     a {
       text-decoration: none;
