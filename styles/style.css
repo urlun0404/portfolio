@@ -20,7 +20,6 @@ a {
 }
 
 body {
-  position: relative;
   overflow-y: hidden;
 }
 
@@ -46,8 +45,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  gap: 3rem;
 }
 
 .background {
@@ -105,7 +103,7 @@ main section.left {
   -webkit-box-flex: 3;
       -ms-flex: 3 1 500px;
           flex: 3 1 500px;
-  padding: 2rem;
+  padding: 2rem 0 2rem 2rem;
 }
 
 main section.left h1#home-title {
@@ -182,21 +180,21 @@ main section.resume .resume-top a {
   color: #fff;
   display: inline-block;
   width: auto;
-  height: 30px;
+  height: 40px;
   border-radius: 8px;
   background-color: #15725b;
   text-align: center;
-  font-size: 1.2rem;
-  line-height: 1em;
-  padding: 0.5rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 2em;
+  padding: 0 0.75rem;
   margin: 0.75rem 0;
   position: absolute;
   right: 0;
 }
 
 main section.resume .resume-top a:hover {
-  -webkit-filter: brightness(1.15);
-          filter: brightness(1.15);
+  -webkit-filter: brightness(1.25);
+          filter: brightness(1.25);
 }
 
 main section.resume .table-wrapper {
@@ -391,7 +389,6 @@ main section.map-wrapper #map {
 
 footer {
   width: 100%;
-  margin-top: 0.5rem;
 }
 
 footer div.icons {
@@ -424,10 +421,7 @@ footer div.icons a img {
     overflow-y: scroll;
   }
   .background {
-    top: 60vh;
-  }
-  header {
-    margin-bottom: 1rem;
+    display: none;
   }
   header nav {
     width: 90%;
@@ -462,6 +456,8 @@ footer div.icons a img {
         -ms-flex-align: center;
             align-items: center;
     height: auto;
+    margin: 1rem 0 2rem 0;
+    gap: 1.5rem;
   }
   main h1 {
     display: block;
@@ -469,13 +465,16 @@ footer div.icons a img {
     text-align: center;
     margin: 1rem 0;
   }
+  main section.left {
+    padding: 1rem 1.5rem;
+  }
   main section.left p {
     font-size: 1.5rem;
   }
   main section.right {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 300px;
-            flex: 1 1 300px;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
   main section.right img {
     width: 30vw;
@@ -586,11 +585,11 @@ footer div.icons a img {
   }
   footer div.icons {
     width: 50%;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
   }
   footer div.icons a img {
-    width: 6vw;
-    height: 6vw;
+    width: 5vw;
+    height: 5vw;
   }
 }
 
@@ -600,7 +599,22 @@ footer div.icons a img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
     gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  main section.right img {
+    width: 30vw;
+    height: 30vw;
+  }
+  footer div.icons a img {
+    width: 7vw;
+    height: 7vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
