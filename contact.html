@@ -46,37 +46,26 @@
       <section class="form">
         <h1>Contact</h1>
         <h2>
-          Feel free to shoot me an email 📧
+          歡迎填寫以下表單聯絡我 💬
+          <br />
+          或者寄信至我的電子郵件
           <a
-            href="mailto:urlun0404@gmail.com"
+            href="mailto:urlun0404@gmail.com?subject=Feedback_&body=Message"
             target="_blank"
-            subject="Portfolio - contact: "
+            title="Shoot me an email from your email client"
             >urlun0404@gmail.com</a
           >
-          <br />
-          or fill the form below 💬
+          :)
         </h2>
-        <form action="" method="" enctype="text/plain">
-          <input
-            id="guestName"
-            type="text"
-            name="guestName"
-            placeholder="Name"
-            required
-          />
-          <input
-            id="guestEamil"
-            type="email"
-            name="guestEmail"
-            placeholder="Email"
-            required
-          />
-          <textarea
-            id="guestMessage"
-            name="guestMessage"
-            placeholder="Message"
-            required
-          ></textarea>
+        <form action="https://formsubmit.co/urlun0404@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="text" name="_subject" placeholder="Subject" />
+          <textarea name="message" placeholder="Message" required></textarea>
+          <!-- reCAPTCHA -->
+          <input type="text" name="_honey" style="display: none" />
+          <!-- forward as a table -->
+          <input type="hidden" name="_template" value="table" />
           <button type="submit">SUBMIT</button>
         </form>
       </section>
