@@ -612,6 +612,7 @@ footer div.icons a img {
   }
   main section.resume .table-wrapper {
     padding: 0 1.75rem;
+    overflow-y: unset;
   }
   main section.resume .table-wrapper table tr {
     display: -webkit-box;
