@@ -364,6 +364,7 @@ footer {
             position: absolute;
             background: #767676;
             border-radius: 2px;
+            transition: transform 0.35s ease-in-out, background-color 0s ease;
           }
           .burger-button:before {
             content: "";
@@ -391,7 +392,7 @@ footer {
             &:hover,
             &.active:hover {
               font-weight: bolder;
-              background: #f0f0f0;
+              background-color: #f0f0f0;
             }
             &:hover:before {
               content: "";
@@ -420,6 +421,21 @@ footer {
         height: 2.5em;
         padding: 0.5em 0;
         transition: height 0.5s ease, padding 0.5s ease;
+      }
+      #burger-toggler:checked + .burger-wrapper {
+        label {
+          .burger-button:before {
+            top: 0;
+            transform: rotate(405deg);
+          }
+          .burger-button {
+            background: rgba(0, 0, 0, 0);
+          }
+          .burger-button:after {
+            top: 0;
+            transform: rotate(-45deg);
+          }
+        }
       }
     }
   }
