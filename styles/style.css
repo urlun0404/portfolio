@@ -66,6 +66,11 @@ header nav {
   padding: 1.5rem 0 1.25rem 0;
 }
 
+header nav #burger-toggler,
+header nav .burger-wrapper {
+  display: none;
+}
+
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,15 +79,18 @@ header nav ul {
       justify-content: space-around;
   padding-left: 1rem;
   list-style-type: none;
-}
-
-header nav ul li {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 header nav ul li a {
   text-decoration: none;
   color: black;
+}
+
+header nav ul li a.active {
+  color: #15725b;
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 main {
@@ -414,12 +422,6 @@ footer div.icons a img {
   height: 2.5vw;
 }
 
-.active {
-  color: #15725b;
-  font-weight: bolder;
-  text-decoration: underline;
-}
-
 @media screen and (max-width: 1100px) {
   body {
     overflow-y: scroll;
@@ -428,9 +430,24 @@ footer div.icons a img {
     display: none;
   }
   header nav {
-    width: 90%;
+    width: 100%;
   }
-  header nav ul {
+  header nav .burger-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.75rem 1.25rem;
+    width: 100vw;
+    height: 55px;
+  }
+  header nav .burger-wrapper label {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -438,10 +455,82 @@ footer div.icons a img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 30px;
+    height: 100%;
+    cursor: pointer;
   }
-  header nav ul li {
-    border-bottom: 1px solid gray;
-    padding: 1rem 0;
+  header nav .burger-wrapper label .burger-button,
+  header nav .burger-wrapper label .burger-button:before,
+  header nav .burger-wrapper label .burger-button:after {
+    display: block;
+    right: 0;
+    width: 30px;
+    height: 5px;
+    position: absolute;
+    background: #767676;
+    border-radius: 2px;
+  }
+  header nav .burger-wrapper label .burger-button:before {
+    content: "";
+    top: -10px;
+  }
+  header nav .burger-wrapper label .burger-button:after {
+    content: "";
+    top: 10px;
+  }
+  header nav .burger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 1.5rem;
+    text-align: center;
+    overflow-y: hidden;
+  }
+  header nav .burger-menu li a {
+    display: block;
+    color: inherit;
+  }
+  header nav .burger-menu li a.active {
+    text-decoration: none;
+  }
+  header nav .burger-menu li a:hover, header nav .burger-menu li a.active:hover {
+    font-weight: bolder;
+    background: #f0f0f0;
+  }
+  header nav .burger-menu li a:hover:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.35em;
+    height: 1.5em;
+    background: #000;
+  }
+  header nav #burger-toggler ~ .burger-menu li,
+  header nav #burger-toggler ~ .burger-menu li a {
+    height: 0;
+    border: 0;
+    padding: 0;
+    -webkit-transition: height 0.5s ease;
+    transition: height 0.5s ease;
+  }
+  header nav #burger-toggler:checked ~ .burger-menu > li {
+    height: 100%;
+    border-bottom: 1px solid #c4c4c4;
+    -webkit-transition: height 0.5s ease;
+    transition: height 0.5s ease;
+  }
+  header nav #burger-toggler:checked ~ .burger-menu a {
+    height: 2.5em;
+    padding: 0.5em 0;
+    -webkit-transition: height 0.5s ease, padding 0.5s ease;
+    transition: height 0.5s ease, padding 0.5s ease;
   }
   main {
     display: -webkit-box;

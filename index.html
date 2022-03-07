@@ -463,11 +463,27 @@
     <!-- header and nav bar -->
     <header>
       <nav>
-        <ul>
-          <li><a class="active" href="#" target="_self">Home</a></li>
-          <li><a href="./about.html" target="_self">About</a></li>
-          <li><a href="./project.html" target="_self">Project</a></li>
-          <li><a href="./contact.html" target="_self">Contact</a></li>
+        <!-- hamburger menu -->
+        <input type="checkbox" name="" id="burger-toggler" />
+        <div class="burger-wrapper">
+          <div class="logo"></div>
+          <label for="burger-toggler">
+            <div class="burger-button"></div>
+          </label>
+        </div>
+        <ul class="burger-menu">
+          <li>
+            <a class="active" href="#" target="_self">Home</a>
+          </li>
+          <li>
+            <a href="./about.html" target="_self">About</a>
+          </li>
+          <li>
+            <a href="./project.html" target="_self">Project</a>
+          </li>
+          <li>
+            <a href="./contact.html" target="_self">Contact</a>
+          </li>
         </ul>
       </nav>
     </header>
