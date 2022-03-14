@@ -244,19 +244,19 @@ main {
     gap: 10rem;
     width: inherit;
     height: 80vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 5rem 2rem;
     font-size: 1.1rem;
     .project {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       justify-content: space-around;
       gap: 3rem;
       width: 85%;
       height: 25em;
       min-height: 40vh;
       .project-card {
-        flex: 1 1 300px;
+        flex: 1 1 400px;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -304,7 +304,7 @@ main {
       }
       .project-info {
         position: relative;
-        flex: 1.5 1 450px;
+        flex: 1.5 1 500px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -657,7 +657,7 @@ footer {
         width: 50vw;
         transform: translate(0);
       }
-      div.rectBackground {
+      .rectBackground {
         display: none;
       }
     }
@@ -692,6 +692,26 @@ footer {
         table,
         table td ul {
           font-size: 1.1rem;
+        }
+      }
+    }
+
+    .projects {
+      height: 100%;
+      padding: 2rem;
+      .project {
+        flex-direction: column;
+        gap: 2rem;
+        height: auto;
+        .project-card {
+          flex: 1 1 50vh;
+        }
+        .project-info {
+          flex: 1 1 30vh;
+          gap: 0.75rem;
+          .tags {
+            position: static;
+          }
         }
       }
     }

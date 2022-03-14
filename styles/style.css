@@ -307,7 +307,7 @@ main .projects {
   gap: 10rem;
   width: inherit;
   height: 80vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 5rem 2rem;
   font-size: 1.1rem;
 }
@@ -316,8 +316,6 @@ main .projects .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   gap: 3rem;
@@ -328,8 +326,8 @@ main .projects .project {
 
 main .projects .project .project-card {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 300px;
-          flex: 1 1 300px;
+      -ms-flex: 1 1 400px;
+          flex: 1 1 400px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -402,8 +400,8 @@ main .projects .project .project-card .project-links a img {
 main .projects .project .project-info {
   position: relative;
   -webkit-box-flex: 1.5;
-      -ms-flex: 1.5 1 450px;
-          flex: 1.5 1 450px;
+      -ms-flex: 1.5 1 500px;
+          flex: 1.5 1 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -877,7 +875,7 @@ footer .icons a img {
     -webkit-transform: translate(0);
             transform: translate(0);
   }
-  main .person div.rectBackground {
+  main .person .rectBackground {
     display: none;
   }
   main .resume {
@@ -920,6 +918,32 @@ footer .icons a img {
   main .resume .table-wrapper table,
   main .resume .table-wrapper table td ul {
     font-size: 1.1rem;
+  }
+  main .projects {
+    height: 100%;
+    padding: 2rem;
+  }
+  main .projects .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+    height: auto;
+  }
+  main .projects .project .project-card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50vh;
+            flex: 1 1 50vh;
+  }
+  main .projects .project .project-info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 30vh;
+            flex: 1 1 30vh;
+    gap: 0.75rem;
+  }
+  main .projects .project .project-info .tags {
+    position: static;
   }
   main .form {
     -webkit-box-flex: 1;
