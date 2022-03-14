@@ -614,11 +614,6 @@ footer .icons a img {
   font-size: 2.5rem;
 }
 
-.shaking {
-  -webkit-animation: shaking 280ms infinite;
-          animation: shaking 280ms infinite;
-}
-
 .button-red {
   display: inline-block;
   margin: 0 0.25rem;
@@ -639,6 +634,11 @@ footer .icons a img {
           box-shadow: 0 0 15px 2px #ffb224;
   -webkit-transform: scale(1.15) translateX(5px);
           transform: scale(1.15) translateX(5px);
+}
+
+.shaking {
+  -webkit-animation: shaking 280ms infinite;
+          animation: shaking 280ms infinite;
 }
 
 @-webkit-keyframes shaking {
@@ -840,25 +840,25 @@ footer .icons a img {
     text-align: center;
     margin: 1rem 0;
   }
-  main section.left {
+  main .left {
     padding: 1rem 1.5rem;
   }
-  main section.left p {
+  main .left p {
     font-size: 1.5rem;
   }
-  main section.right {
+  main .right {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
   }
-  main section.right img {
+  main .right img {
     width: 30vw;
     height: 30vw;
     position: static;
     -webkit-transform: none;
             transform: none;
   }
-  main section.person {
+  main .person {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -872,32 +872,32 @@ footer .icons a img {
         -ms-flex: 1 1 300px;
             flex: 1 1 300px;
   }
-  main section.person img {
+  main .person img {
     width: 50vw;
     -webkit-transform: translate(0);
             transform: translate(0);
   }
-  main section.person div.rectBackground {
+  main .person div.rectBackground {
     display: none;
   }
-  main section.resume {
+  main .resume {
     height: auto;
     padding: 0;
   }
-  main section.resume .resume-top {
+  main .resume .resume-top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main section.resume .resume-top a {
+  main .resume .resume-top a {
     position: static;
   }
-  main section.resume .table-wrapper {
+  main .resume .table-wrapper {
     padding: 0 2rem;
     overflow-y: unset;
   }
-  main section.resume .table-wrapper table tr {
+  main .resume .table-wrapper table tr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -906,29 +906,29 @@ footer .icons a img {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main section.resume .table-wrapper table tr td:first-child {
+  main .resume .table-wrapper table tr td:first-child {
     width: 100%;
   }
-  main section.resume .table-wrapper table tr td {
+  main .resume .table-wrapper table tr td {
     gap: 1rem;
   }
-  main section.resume .table-wrapper table tr td div.icons {
+  main .resume .table-wrapper table tr td div.icons {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  main section.resume .table-wrapper table,
-  main section.resume .table-wrapper table td ul {
+  main .resume .table-wrapper table,
+  main .resume .table-wrapper table td ul {
     font-size: 1.1rem;
   }
-  main section.form {
+  main .form {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     width: 100%;
     margin-right: unset;
   }
-  main section.form div {
+  main .form div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -939,10 +939,10 @@ footer .icons a img {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main section.form div input {
+  main .form div input {
     min-width: 70%;
   }
-  main section.map-wrapper {
+  main .map-wrapper {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -955,7 +955,7 @@ footer .icons a img {
     max-height: none;
     margin: 2rem 0;
   }
-  main section.map-wrapper #map {
+  main .map-wrapper #map {
     position: static;
     top: auto;
     width: 80vw;
@@ -987,11 +987,11 @@ footer .icons a img {
 }
 
 @media screen and (max-width: 750px) {
-  main section.right img {
+  main .right img {
     width: 30vw;
     height: 30vw;
   }
-  footer div.icons a img {
+  footer .icons a img {
     width: 7vw;
     height: 7vw;
   }
