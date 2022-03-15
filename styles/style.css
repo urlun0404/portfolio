@@ -389,8 +389,8 @@ main .projects .project .project-card .project-links a {
 }
 
 main .projects .project .project-card .project-links a img {
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 3vw;
+  height: 3vw;
   min-width: 32px;
   min-height: 32px;
   -webkit-filter: brightness(2);
