@@ -249,14 +249,12 @@ main {
     font-size: 1.1rem;
     .project {
       display: flex;
-      // flex-wrap: wrap;
       justify-content: space-around;
       gap: 3rem;
       width: 85%;
-      height: 25em;
-      min-height: 40vh;
+      min-height: 55vh;
       .project-card {
-        flex: 1 1 400px;
+        flex: 1 1 500px;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -318,10 +316,17 @@ main {
           color: #767676;
         }
         ul {
-          padding-left: 1rem;
+          width: 100%;
+          font-size: 1rem;
           list-style-position: inside;
           li {
-            margin: 0.75rem 0;
+            ol {
+              width: inherit;
+              padding-left: 1.5rem;
+              li {
+                margin: 0.25rem 0;
+              }
+            }
           }
         }
         .tags {
