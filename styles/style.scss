@@ -241,7 +241,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10rem;
+    gap: 5rem;
     width: inherit;
     height: 80vh;
     overflow-y: auto;
@@ -250,16 +250,15 @@ main {
     .project {
       display: flex;
       justify-content: space-around;
-      align-items: center;
-      gap: 3rem;
+      gap: 4rem;
       width: 85%;
-      min-height: 55vh;
+      height: 100%;
+      min-height: 60vh;
       .project-card {
-        flex: 1 1 500px;
+        flex: 1 1 480px;
         position: relative;
         display: flex;
         flex-direction: column;
-        align-items: center;
         width: 90%;
         height: 90%;
         overflow: hidden;
@@ -316,7 +315,7 @@ main {
         align-items: flex-start;
         gap: 0.5rem;
         width: 90%;
-        height: 90%;
+        height: 80%;
         h2 {
           font-size: 2rem;
         }
@@ -339,8 +338,8 @@ main {
           }
         }
         .tags {
-          position: absolute;
-          bottom: 0;
+          // position: absolute;
+          // bottom: 0;
           display: flex;
           gap: 0.1rem;
           width: 50%;
